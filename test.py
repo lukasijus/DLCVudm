@@ -1,9 +1,7 @@
-import cv2
-import numpy as np
+import tensorflow as tf
 
-from tensorflow.keras.datasets import  mnist
-from tensorflow.keras.models import  load_model
 
-classifier = load_model('C:\\Users\\lukas.rimkus\\Software\\DLCVudm\\mnist.h5')
+classifier = tf.keras.models.load_model('mnist.h5')
+
 
 
