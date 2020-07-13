@@ -103,10 +103,10 @@ model.compile(loss='categorical_crossentropy',
 
 nb_train_samples = 20000
 nb_validation_samples = 4000
-epochs = 5
+epochs = 6
 batch_size = 150
 
-history = model.fit_generator(
+history = model.fit(
     train_generator,
     steps_per_epoch=nb_train_samples // batch_size,
     epochs=epochs,
@@ -114,4 +114,4 @@ history = model.fit_generator(
     validation_data=validation_generator,
     validation_steps=nb_validation_samples // batch_size)
 
-model.save(os.path.join(os.path.dirname(os.path.abspath(__file__))), 'model')
+model.save(os.path.dirname(os.path.abspath(__file__)) + '\\model\\model.h5')
